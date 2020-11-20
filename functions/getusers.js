@@ -28,6 +28,11 @@ exports.handler = function (event, context, callback) {
             .then(res => send(res.data))
             .catch(err => send(err));
     }
+    const logIn = () => {
+        axios.post('http://192.168.10.13:9899/api/Auth/Login', JSON.parse(event.body))
+            .then(res => send(res.data))
+            .catch(err => send(err));
+    }
 
     //Method GET
     if (event.httpMethod === 'GET') {
@@ -38,6 +43,6 @@ exports.handler = function (event, context, callback) {
     //Method POST
     if (event.httpMethod === 'POST') {
         //Run function
+        logIn();
     }
-    console.log(event);
 }
