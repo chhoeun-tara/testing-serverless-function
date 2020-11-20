@@ -6,6 +6,3 @@
   from = "/*"
   to = "/.netlify/functions/:splat"
   status = 200
-  force = true
-  headers = {X-From = "Netlify"}
-  signed = "API_SIGNATURE_TOKEN"
