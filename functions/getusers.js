@@ -29,9 +29,15 @@ exports.handler = function (event, context, callback) {
             .catch(err => send(err));
     }
 
-    //Make sure method is GET
+    //Method GET
     if (event.httpMethod === 'GET') {
         //Run function
         getUser();
     }
+
+    //Method POST
+    if (event.httpMethod === 'POST') {
+        //Run function
+    }
+    console.log(event);
 }
