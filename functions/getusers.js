@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-
 exports.handler = function (event, context, callback) {
 
     const { API_URL, API_CLIENT_ID, API_CLIENT_SECRET } = process.env;
